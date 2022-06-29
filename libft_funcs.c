@@ -113,3 +113,4 @@ char	*ft_strdup(const char *s1)
 	output[index] = '\0';
 	return (output);
 }
+
