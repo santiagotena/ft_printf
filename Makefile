@@ -6,11 +6,11 @@
 #    By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 19:15:00 by stena-he          #+#    #+#              #
-#    Updated: 2022/06/27 20:06:07 by stena-he         ###   ########.fr        #
+#    Updated: 2022/06/30 01:19:46 by stena-he         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 	printf.a
+NAME = 	libftprintf.a
 
 CC = gcc
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-SRC =	ft_atoi.c
+SRC =	ft_printf.c libft_funcs.c
 			
 OUT_SRC = $(SRC:%.c=%.o)
 
