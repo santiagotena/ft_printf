@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/06/30 21:48:09 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/30 22:02:18 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,27 +114,16 @@ int		percent_func(va_list args, char flag)
 // 	return (0);
 // }
 
-// int		main(void)
-// {
-// 	int a;
-// 	int b;
+int		main(void)
+{
+	int a;
+	int b;
 
-// 	// int *c;
-// 	// int x = 5;
-
-// 	a = printf(" %u ", -1);
-// 	printf("%c", '\n');
-// 	b = ft_printf(" %u ", -1);
-// 	printf("%c", '\n');
-// 	printf("%d, %d\n", a, b);
-
-// 	// c = &x;
-// 	// printf("%p", c);
-
-// 	// printf(" %u ", -1);
-// 	// printf(" %u ", -2);
-// 	// printf(" %u ", -2);
-// 	// ft_printf(" %u ", -2);
+	a = printf(" %x ", 10);
+	printf("%c", '\n');
+	b = ft_printf(" %x ", 10);
+	printf("%c", '\n');
+	printf("%d, %d\n", a, b);
 	
-// 	return (0);
-// }
+	return (0);
+}
