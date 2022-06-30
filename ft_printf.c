@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/06/30 01:20:48 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/30 17:48:30 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int ft_printf(const char *str, ...)
 		index++;
 	}
 	va_end(args);
-	printf("%d\n", count);
+	// printf("%d\n", count);
 	return(count);
 }
 
@@ -60,6 +60,11 @@ int		percent_func(va_list args, char str)
 		
 		index = 0;
 		value = va_arg(args, char *);
+		if (value == NULL)
+		{
+			write(1, "(null)", 6);
+			return (6);
+		}
 		while (value[index])
 		{
 			write(1, &value[index], 1);
@@ -102,5 +107,12 @@ int		percent_func(va_list args, char str)
 // 	ft_printf("%i %i\n", 534, 123);
 // 	ft_printf("Santiago %s\n", "Tena");
 // 	// write(1, "523", 3);
+// 	return (0);
+// }
+
+// int		main(void)
+// {
+// 	printf(" NULL %s NULL \n", NULL);
+// 	ft_printf(" NULL %s NULL ", NULL);
 // 	return (0);
 // }
