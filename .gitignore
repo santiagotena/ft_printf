@@ -1,1 +1,6 @@
+# Tester
 printfTester/
+
+# Output Files
+*.o
+*.a

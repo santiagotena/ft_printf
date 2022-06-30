@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/06/30 17:48:30 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/30 19:58:21 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,19 +74,23 @@ int		percent_func(va_list args, char str)
 	}
 	else if (str == 'p')
 		return (0);
-	else if (str == 'd')
-		return (0);
-	else if (str == 'i')
+	else if (str == 'i' || str == 'd')
 	{
 		int		value;
 		
 		value = va_arg(args, int);
-		write(1, ft_itoa(value), ft_int_length(value));
+		ft_putnbr(value);
 		return (ft_int_length(value));
 	}
 		
 	else if (str == 'u')
-		return (0);
+	{
+		int		value;
+		
+		value = va_arg(args, int);
+		ft_putnbr(value);
+		return (ft_int_length(value));
+	}
 	else if (str == 'x')
 		return (0);
 	else if (str == 'X')
@@ -106,13 +110,29 @@ int		percent_func(va_list args, char str)
 // 	ft_printf("Sant%c%c\n", 'i', 'a');
 // 	ft_printf("%i %i\n", 534, 123);
 // 	ft_printf("Santiago %s\n", "Tena");
-// 	// write(1, "523", 3);
+	
 // 	return (0);
 // }
 
 // int		main(void)
 // {
-// 	printf(" NULL %s NULL \n", NULL);
-// 	ft_printf(" NULL %s NULL ", NULL);
+// 	int a;
+// 	int b;
+
+// 	int *c;
+// 	int x = 5;
+
+// 	// a = printf(" %d ", 0);
+// 	// printf("%c", '\n');
+// 	// b = ft_printf(" %d ", 0);
+// 	// printf("%c", '\n');
+// 	// printf("%d, %d\n", a, b);
+
+// 	// c = &x;
+// 	// printf("%p", c);
+
+// 	printf(" %u ", 0);
+// 	printf(" %u ", -10);
+	
 // 	return (0);
 // }

@@ -21,6 +21,8 @@ int	ft_int_length(int x)
 	int		index;
 
 	index = 0;
+	if (x < 0)
+		index++;
 	if (x == 0)
 		return (1);
 	while (x != 0)
@@ -31,54 +33,54 @@ int	ft_int_length(int x)
 	return (index);
 }
 
-char	*ft_char_output(int length, int minus, char *output, int n)
-{
-	while (length + minus >= 0)
-	{
-		output[length + minus] = n % 10 + '0';
-		n = n / 10;
-		if (length == 0 && minus == 1)
-		{
-			output[0] = '-';
-			break ;
-		}
-		length--;
-	}
-	return (output);
-}
+// char	*ft_char_output(int length, int minus, char *output, int n)
+// {
+// 	while (length + minus >= 0)
+// 	{
+// 		output[length + minus] = n % 10 + '0';
+// 		n = n / 10;
+// 		if (length == 0 && minus == 1)
+// 		{
+// 			output[0] = '-';
+// 			break ;
+// 		}
+// 		length--;
+// 	}
+// 	return (output);
+// }
 
-/**
- * @brief Allocates (with malloc(3)) and returns a string representing the 
- * integer received as an argument. Negative numbers must be handled.
- * 
- * Returns the string representing the integer. NULL if the allocation fails.
- * 
- * @param n 
- * @return char* 
- */
-char	*ft_itoa(int n)
-{
-	char	*output;
-	int		minus;
-	int		length;
+// /**
+//  * @brief Allocates (with malloc(3)) and returns a string representing the 
+//  * integer received as an argument. Negative numbers must be handled.
+//  * 
+//  * Returns the string representing the integer. NULL if the allocation fails.
+//  * 
+//  * @param n 
+//  * @return char* 
+//  */
+// char	*ft_itoa(int n)
+// {
+// 	char	*output;
+// 	int		minus;
+// 	int		length;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	minus = 0;
-	if (n < 0)
-	{
-		minus = 1;
-		n = n * -1;
-	}
-	length = ft_int_length(n);
-	output = (char *) malloc((length + minus + 1) * sizeof(char));
-	if (!output)
-		return (NULL);
-	output[length + minus] = '\0';
-	length--;
-	output = ft_char_output(length, minus, output, n);
-	return (output);
-}
+// 	if (n == -2147483648)
+// 		return (ft_strdup("-2147483648"));
+// 	minus = 0;
+// 	if (n < 0)
+// 	{
+// 		minus = 1;
+// 		n = n * -1;
+// 	}
+// 	length = ft_int_length(n);
+// 	output = (char *) malloc((length + minus + 1) * sizeof(char));
+// 	if (!output)
+// 		return (NULL);
+// 	output[length + minus] = '\0';
+// 	length--;
+// 	output = ft_char_output(length, minus, output, n);
+// 	return (output);
+// }
 
 /**
  * @brief Allocates sufficient memory for a copy of the string s1, does the 
@@ -114,3 +116,37 @@ char	*ft_strdup(const char *s1)
 	return (output);
 }
 
+// putnbr
+void	ft_putchar(int digit)
+{
+	int		d;
+
+	d = digit + '0';
+	write(1, &d, 1);
+}
+
+void	recursion(int nb)
+{
+	if (nb > 9)
+	{
+		nb = nb / 10;
+		recursion(nb);
+		ft_putchar(nb % 10);
+	}
+}
+
+void	ft_putnbr(int nb)
+{	
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	else if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = nb * -1;
+	}
+	recursion(nb);
+	ft_putchar(nb % 10);
+}
