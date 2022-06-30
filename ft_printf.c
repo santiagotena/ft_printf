@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/06/30 19:58:21 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/30 21:48:09 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int ft_printf(const char *str, ...)
 	return(count);
 }
 
-int		percent_func(va_list args, char str)
+int		percent_func(va_list args, char flag)
 {
-	if (str == 'c')
+	if (flag == 'c')
 	{
 		int		value;
 			
@@ -52,7 +52,7 @@ int		percent_func(va_list args, char str)
 		write(1, &value, 1);	
 		return (1);	
 	}
-	else if (str == 's')
+	else if (flag == 's')
 	{
 		int		index;
 		char	*value;
@@ -72,9 +72,9 @@ int		percent_func(va_list args, char str)
 		}
 		return (ft_strlen(value));
 	}
-	else if (str == 'p')
+	else if (flag == 'p')
 		return (0);
-	else if (str == 'i' || str == 'd')
+	else if (flag == 'i' || flag == 'd')
 	{
 		int		value;
 		
@@ -83,21 +83,21 @@ int		percent_func(va_list args, char str)
 		return (ft_int_length(value));
 	}
 		
-	else if (str == 'u')
+	else if (flag == 'u')
 	{
-		int		value;
+		int unsigned	value;
 		
-		value = va_arg(args, int);
-		ft_putnbr(value);
-		return (ft_int_length(value));
+		value = va_arg(args, unsigned int);
+		ft_put_unsign_nb(value);
+		return (ft_unsign_length(value));
 	}
-	else if (str == 'x')
+	else if (flag == 'x')
 		return (0);
-	else if (str == 'X')
+	else if (flag == 'X')
 		return (0);
-	else if (str == '%')
+	else if (flag == '%')
 	{
-		write(1, &str, 1);
+		write(1, &flag, 1);
 		return (1);
 	}
 	return (0);
@@ -119,20 +119,22 @@ int		percent_func(va_list args, char str)
 // 	int a;
 // 	int b;
 
-// 	int *c;
-// 	int x = 5;
+// 	// int *c;
+// 	// int x = 5;
 
-// 	// a = printf(" %d ", 0);
-// 	// printf("%c", '\n');
-// 	// b = ft_printf(" %d ", 0);
-// 	// printf("%c", '\n');
-// 	// printf("%d, %d\n", a, b);
+// 	a = printf(" %u ", -1);
+// 	printf("%c", '\n');
+// 	b = ft_printf(" %u ", -1);
+// 	printf("%c", '\n');
+// 	printf("%d, %d\n", a, b);
 
 // 	// c = &x;
 // 	// printf("%p", c);
 
-// 	printf(" %u ", 0);
-// 	printf(" %u ", -10);
+// 	// printf(" %u ", -1);
+// 	// printf(" %u ", -2);
+// 	// printf(" %u ", -2);
+// 	// ft_printf(" %u ", -2);
 	
 // 	return (0);
 // }
