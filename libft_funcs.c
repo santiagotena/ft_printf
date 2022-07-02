@@ -100,3 +100,72 @@ void	ft_put_unsign_nb(unsigned int nb)
 	unsign_recursion(nb);
 	ft_putchar(nb % 10);
 }
+
+// ft_put_low_hexadec_nb
+
+int	ft_hexadec_length(unsigned int x)
+{
+	int		index;
+
+	index = 0;
+	if (x == 0)
+		return (1);
+	while (x != 0)
+	{
+		x /= 16;
+		index++;
+	}
+	return (index);
+}
+
+void	ft_put_low_hexadec_nb(unsigned int nb)
+{	
+	int		out;
+	
+	if (nb >= 16)
+	{
+		ft_put_low_hexadec_nb(nb / 16);
+		ft_put_low_hexadec_nb(nb % 16);
+	}
+	else
+	{
+		if (nb >= 10 && nb <= 15)
+		{
+			out = nb - 10 + 'a';
+			write(1, &out, 1);
+		}
+		else
+		{
+			out = nb + '0';
+			write(1, &out, 1);
+		}
+		
+	}
+}
+
+// ft_put_upp_hexadec_nb
+
+void	ft_put_upp_hexadec_nb(unsigned int nb)
+{	
+	int		out;
+	
+	if (nb >= 16)
+	{
+		ft_put_upp_hexadec_nb(nb / 16);
+		ft_put_upp_hexadec_nb(nb % 16);
+	}
+	else
+	{
+		if (nb >= 10 && nb <= 15)
+		{
+			out = nb - 10 + 'A';
+			write(1, &out, 1);
+		}
+		else
+		{
+			out = nb + '0';
+			write(1, &out, 1);
+		}
+		
+	}
+}

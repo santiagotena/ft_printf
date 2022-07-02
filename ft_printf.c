@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/06/30 22:02:18 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/02 18:14:02 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,21 @@ int		percent_func(va_list args, char flag)
 		return (ft_unsign_length(value));
 	}
 	else if (flag == 'x')
-		return (0);
+	{
+		int unsigned	value;
+		
+		value = va_arg(args, unsigned int);
+		ft_put_low_hexadec_nb(value);
+		return (ft_hexadec_length(value));
+	}
 	else if (flag == 'X')
-		return (0);
+	{
+		int unsigned	value;
+		
+		value = va_arg(args, unsigned int);
+		ft_put_upp_hexadec_nb(value);
+		return (ft_hexadec_length(value));
+	}
 	else if (flag == '%')
 	{
 		write(1, &flag, 1);
@@ -114,16 +126,16 @@ int		percent_func(va_list args, char flag)
 // 	return (0);
 // }
 
-int		main(void)
-{
-	int a;
-	int b;
+// int		main(void)
+// {
+// 	int a;
+// 	int b;
 
-	a = printf(" %x ", 10);
-	printf("%c", '\n');
-	b = ft_printf(" %x ", 10);
-	printf("%c", '\n');
-	printf("%d, %d\n", a, b);
+// 	a = printf(" %x ", -10);
+// 	printf("%c", '\n');
+// 	b = ft_printf(" %x ", -10);
+// 	printf("%c", '\n');
+// 	printf("%d, %d\n", a, b);
 	
-	return (0);
-}
+// 	return (0);
+// }
