@@ -103,7 +103,7 @@ void	ft_put_unsign_nb(unsigned int nb)
 
 // ft_put_low_hexadec_nb
 
-int	ft_hexadec_length(unsigned int x)
+int	ft_hexadec_length(unsigned long long x)
 {
 	int		index;
 
@@ -118,7 +118,7 @@ int	ft_hexadec_length(unsigned int x)
 	return (index);
 }
 
-void	ft_put_low_hexadec_nb(unsigned int nb)
+void	ft_put_low_hexadec_nb(unsigned long long int nb)
 {	
 	int		out;
 	
@@ -168,4 +168,15 @@ void	ft_put_upp_hexadec_nb(unsigned int nb)
 		}
 		
 	}
+}
+
+// ft_put_pointer
+
+void	ft_put_pointer(unsigned long long ptr)
+{
+	write(1, "0x", 2);
+	if (ptr == 0)
+		write(1, "0", 1);
+	else
+		ft_put_low_hexadec_nb(ptr);
 }

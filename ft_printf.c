@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/02 18:14:02 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/02 19:01:02 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,13 @@ int		percent_func(va_list args, char flag)
 		return (ft_strlen(value));
 	}
 	else if (flag == 'p')
-		return (0);
+	{
+		unsigned long	value;
+		
+		value = va_arg(args, unsigned long);
+		ft_put_pointer(value);
+		return (2 + ft_hexadec_length(value));
+	}
 	else if (flag == 'i' || flag == 'd')
 	{
 		int		value;
@@ -126,14 +132,17 @@ int		percent_func(va_list args, char flag)
 // 	return (0);
 // }
 
+// #include <limits.h>
+
 // int		main(void)
 // {
 // 	int a;
 // 	int b;
+// 	int arg = -1;
 
-// 	a = printf(" %x ", -10);
+// 	a = printf(" %p %p ", (void *)LONG_MIN, (void *)LONG_MAX);
 // 	printf("%c", '\n');
-// 	b = ft_printf(" %x ", -10);
+// 	b = ft_printf(" %p %p ", (void *)LONG_MIN, (void *)LONG_MAX);
 // 	printf("%c", '\n');
 // 	printf("%d, %d\n", a, b);
 	
