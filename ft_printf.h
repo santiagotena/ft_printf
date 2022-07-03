@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:12:49 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 18:36:43 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 18:54:31 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <stdlib.h>
 
 /* Ft_printf */
-int		ft_printf(const char *, ...);
+int		ft_printf(const char *str, ...);
 int		percent_func(va_list args, char str);
 
 /* Libft */

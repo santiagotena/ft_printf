@@ -6,18 +6,17 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:40:23 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 17:43:32 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 18:58:54 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_put_str(va_list args)
+int	ft_put_str(va_list args)
 {
 	int		index;
 	char	*value;
-	
-	
+
 	index = 0;
 	value = va_arg(args, char *);
 	if (value == NULL)
@@ -28,7 +27,7 @@ int		ft_put_str(va_list args)
 	while (value[index])
 	{
 		write(1, &value[index], 1);
-		index++;	
+		index++;
 	}
 	return (ft_strlen(value));
 }

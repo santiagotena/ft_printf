@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int.c                                     :+:      :+:    :+:   */
+/*   ft_put_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:54:32 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 16:54:33 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 18:57:27 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_int_length(int x)
 int	ft_put_int(va_list args)
 {
 	int		value;
-		
+
 	value = va_arg(args, int);
 	ft_putnbr(value);
 	return (ft_int_length(value));

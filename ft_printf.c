@@ -6,17 +6,17 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 18:36:31 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 18:52:55 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	int		count;
 	int		index;
-	va_list args;
+	va_list	args;
 
 	count = 0;
 	index = 0;
@@ -38,10 +38,10 @@ int ft_printf(const char *str, ...)
 		index++;
 	}
 	va_end(args);
-	return(count);
+	return (count);
 }
 
-int		percent_func(va_list args, char flag)
+int	percent_func(va_list args, char flag)
 {
 	if (flag == 'c')
 		return (ft_put_char(args));
@@ -72,7 +72,6 @@ int		percent_func(va_list args, char flag)
 // 	ft_printf("Sant%c%c\n", 'i', 'a');
 // 	ft_printf("%i %i\n", 534, 123);
 // 	ft_printf("Santiago %s\n", "Tena");
-	
 // 	return (0);
 // }
 
@@ -89,6 +88,5 @@ int		percent_func(va_list args, char flag)
 // 	b = ft_printf(" %p %p ", (void *)LONG_MIN, (void *)LONG_MAX);
 // 	printf("%c", '\n');
 // 	printf("%d, %d\n", a, b);
-	
 // 	return (0);
 // }

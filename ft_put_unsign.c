@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:28:00 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 17:33:51 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 18:59:15 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ void	ft_put_unsign_nb(unsigned int nb)
 	ft_putchar(nb % 10);
 }
 
-int		ft_put_unsign(va_list args)
+int	ft_put_unsign(va_list args)
 {
 	int unsigned	value;
-		
+
 	value = va_arg(args, unsigned int);
 	ft_put_unsign_nb(value);
 	return (ft_unsign_length(value));
