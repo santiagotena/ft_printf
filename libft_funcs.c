@@ -14,25 +14,6 @@ size_t	ft_strlen(const char *str)
 	return (counter);
 }
 
-// ft_int_length
-
-int	ft_int_length(int x)
-{
-	int		index;
-
-	index = 0;
-	if (x < 0)
-		index++;
-	if (x == 0)
-		return (1);
-	while (x != 0)
-	{
-		x /= 10;
-		index++;
-	}
-	return (index);
-}
-
 // putnbr
 void	ft_putchar(int digit)
 {
