@@ -4,3 +4,4 @@ printfTester/
 # Output Files
 *.o
 *.a
+a.out
