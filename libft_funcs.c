@@ -49,39 +49,6 @@ void	ft_putnbr(int nb)
 	ft_putchar(nb % 10);
 }
 
-// ft_put_unsign_nb
-
-int	ft_unsign_length(unsigned int x)
-{
-	int		index;
-
-	index = 0;
-	if (x == 0)
-		return (1);
-	while (x != 0)
-	{
-		x /= 10;
-		index++;
-	}
-	return (index);
-}
-
-void	unsign_recursion(unsigned int nb)
-{
-	if (nb > 9)
-	{
-		nb = nb / 10;
-		unsign_recursion(nb);
-		ft_putchar(nb % 10);
-	}
-}
-
-void	ft_put_unsign_nb(unsigned int nb)
-{	
-	unsign_recursion(nb);
-	ft_putchar(nb % 10);
-}
-
 // ft_put_pointer
 
 void	ft_put_pointer(unsigned long long ptr)
