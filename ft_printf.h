@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:12:49 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 18:54:31 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 19:21:39 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int		ft_put_str(va_list args);
 // pointers -p
 int		ft_put_ptr(va_list args);
 void	ft_put_pointer(unsigned long long ptr);
-// integers -i
-int		ft_put_int(va_list args);
+// integers & decimals -i -d
+int		ft_put_nbr(va_list args);
 void	ft_putnbr(int nb);
 int		ft_int_length(int x);
 // unsigned -u
