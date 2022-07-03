@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 16:57:49 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 17:17:16 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int ft_printf(const char *str, ...)
 		index++;
 	}
 	va_end(args);
-	// printf("%d\n", count);
 	return(count);
 }
 
@@ -91,21 +90,9 @@ int		percent_func(va_list args, char flag)
 		return (ft_unsign_length(value));
 	}
 	else if (flag == 'x')
-	{
-		int unsigned	value;
-		
-		value = va_arg(args, unsigned int);
-		ft_put_low_hexadec_nb(value);
-		return (ft_hexadec_length(value));
-	}
+		return (ft_put_low_hexadec(args));
 	else if (flag == 'X')
-	{
-		int unsigned	value;
-		
-		value = va_arg(args, unsigned int);
-		ft_put_upp_hexadec_nb(value);
-		return (ft_hexadec_length(value));
-	}
+		return (ft_put_upp_hexadec(args));
 	else if (flag == '%')
 	{
 		write(1, &flag, 1);
