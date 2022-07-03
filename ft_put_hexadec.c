@@ -6,13 +6,13 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:08:02 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 18:56:50 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 19:51:48 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexadec_length(unsigned long long int x)
+int	ft_hexadec_length(unsigned long int x)
 {
 	int		index;
 
@@ -29,7 +29,7 @@ int	ft_hexadec_length(unsigned long long int x)
 
 // ft_put_low_hexadec_nb
 
-void	ft_put_low_hexadec_nb(unsigned long long int nb)
+void	ft_put_low_hexadec_nb(unsigned long int nb)
 {	
 	int		out;
 
