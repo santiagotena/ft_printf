@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:12:49 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 17:42:53 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 17:47:01 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int		percent_func(va_list args, char str);
 size_t	ft_strlen(const char *str);
 
 /* Flag Functions */
+// characters -c
+int		ft_put_char(va_list args);
 // strings -s
 int		ft_put_str(va_list args);
 // pointers -p

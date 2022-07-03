@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 17:42:22 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 17:50:33 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,7 @@ int ft_printf(const char *str, ...)
 int		percent_func(va_list args, char flag)
 {
 	if (flag == 'c')
-	{
-		int		value;
-			
-		value = va_arg(args, int);
-		write(1, &value, 1);	
-		return (1);	
-	}
+		return (ft_put_char(args));
 	else if (flag == 's')
 		return (ft_put_str(args));
 	else if (flag == 'p')
