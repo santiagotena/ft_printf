@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:08:02 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 20:54:24 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 21:03:11 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_put_low_hexadec_nb(unsigned long int nb)
 	}
 }
 
-void	ft_put_upp_hexadec_nb(unsigned int nb)
+void	ft_put_upp_hexadec_nb(unsigned long int nb)
 {	
 	int		out;
 

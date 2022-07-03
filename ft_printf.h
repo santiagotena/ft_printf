@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:12:49 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 20:57:11 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 21:03:23 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		ft_unsign_length(unsigned int x);
 int		ft_put_low_hexadec(va_list args);
 void	ft_put_low_hexadec_nb(unsigned long int nb);
 int		ft_put_upp_hexadec(va_list args);
-void	ft_put_upp_hexadec_nb(unsigned int nb);
+void	ft_put_upp_hexadec_nb(unsigned long int nb);
 int		ft_hexadec_length(unsigned long x);
 
 #endif
