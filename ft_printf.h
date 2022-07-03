@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:12:49 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 16:52:55 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 17:03:19 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@
 // malloc
 # include <stdlib.h>
 
-/* ft_printf */
+/* Ft_printf */
 int		ft_printf(const char *, ...);
 int		percent_func(va_list args, char str);
 
-/* libft */
+/* Libft */
 size_t	ft_strlen(const char *str);
 
-/* Extra */
+/* Flag Functions */
 // integers -i
 int		ft_put_int(va_list args);
 void	ft_putnbr(int nb);
