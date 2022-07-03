@@ -6,13 +6,13 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:28:00 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 18:59:15 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 19:47:48 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_putchar(int digit)
+static void	ft_putchar(unsigned int digit)
 {
 	int		d;
 
