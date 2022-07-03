@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 17:31:44 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/03 17:42:22 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,25 +52,7 @@ int		percent_func(va_list args, char flag)
 		return (1);	
 	}
 	else if (flag == 's')
-	{
-		int		index;
-		char	*value;
-		
-		
-		index = 0;
-		value = va_arg(args, char *);
-		if (value == NULL)
-		{
-			write(1, "(null)", 6);
-			return (6);
-		}
-		while (value[index])
-		{
-			write(1, &value[index], 1);
-			index++;	
-		}
-		return (ft_strlen(value));
-	}
+		return (ft_put_str(args));
 	else if (flag == 'p')
 	{
 		unsigned long	value;

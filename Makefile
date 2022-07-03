@@ -6,7 +6,7 @@
 #    By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 19:15:00 by stena-he          #+#    #+#              #
-#    Updated: 2022/07/03 17:32:57 by stena-he         ###   ########.fr        #
+#    Updated: 2022/07/03 17:43:13 by stena-he         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 SRC =	ft_printf.c ft_put_int.c ft_put_hexadec.c ft_put_unsign.c\
-		libft_funcs.c
+		libft_funcs.c ft_put_str.c
 			
 OUT_SRC = $(SRC:%.c=%.o)
 
