@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:11:03 by stena-he          #+#    #+#             */
-/*   Updated: 2022/07/03 21:34:16 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:46:10 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ int	ft_printf(const char *str, ...)
 		if (str[index] == '%')
 		{
 			index++;
-			if (str[index] == '\0')
-				return (0);
 			count = count + percent_func(args, str[index]);
 		}
 		else
